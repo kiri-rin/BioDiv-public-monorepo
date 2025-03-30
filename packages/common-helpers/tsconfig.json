@@ -1,0 +1,20 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "paths": {
+      "@rrrcn/common/*": ["./*"],
+      "@rrrcn/services/*": ["../rrrcn-services/*"]
+    },
+    "allowJs": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "composite": true,
+    "preserveSymlinks": true
+
+  },
+
+}

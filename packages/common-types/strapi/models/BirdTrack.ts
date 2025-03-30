@@ -1,0 +1,21 @@
+import { Species } from "./Species";
+import { Upload_File } from "./Upload_File";
+import { MapSpatialGrid } from "./MapSpatialGrid";
+import { MapMigrationTrack } from "./MapMigrationTrack";
+export type BirdTrack = {
+  id: number;
+  name: string | null;
+  track: object | null;
+  species: Species | null;
+  source_file: Upload_File | null;
+  spatial_grids: MapSpatialGrid[] | null;
+  index: object | null;
+  map_migration_tracks: MapMigrationTrack[] | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: BirdTrack[] | null;
+  locale: string | null;
+};

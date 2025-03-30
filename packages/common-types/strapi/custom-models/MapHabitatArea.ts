@@ -1,0 +1,34 @@
+import { Species } from "../models/Species";
+import { MapSpatialGrid } from "../models/MapSpatialGrid";
+import { MapSpatialGridCell } from "../models/MapSpatialGridCell";
+import { VulnerabilityResult } from "../models/VulnerabilityResult";
+import { GeoJSON } from "geojson";
+
+export type MapHabitatArea = {
+  id: number;
+  name: string | null;
+  species: Species | null;
+  map_spatial_grid: MapSpatialGrid | null;
+  area: number | null;
+  indexed: boolean | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: GeoJSON.Feature<GeoJSON.Polygon> | null;
+  points: GeoJSON.FeatureCollection<GeoJSON.Point> | null;
+  points_count: number | null;
+  map_spatial_grid_cells: MapSpatialGridCell[] | null;
+  meta: object | null;
+  vulnerability_result: VulnerabilityResult | null;
+  months_densities: number[];
+  birds_per_point: number | null;
+  buffer_around_point: number | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: MapHabitatArea[] | null;
+  locale: string | null;
+};

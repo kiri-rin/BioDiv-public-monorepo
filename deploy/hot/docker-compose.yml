@@ -1,0 +1,35 @@
+services:
+  api:
+    environment:
+      R_BASE_URL: "http://host.docker.internal:8000"
+    image: kiri909/rrrcn-api-hot:latest
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "1338:1337"
+    volumes:
+      - ../../:/app
+    extra_hosts:
+      - host.docker.internal:host-gateway
+  next:
+    image: kiri909/rrrcn-next_hot:latest
+    build:
+      dockerfile: Dockerfile_next
+    ports:
+      - "3001:3000"
+    volumes:
+      - ../../:/app
+#  postgres:
+#    image: postgres
+#    restart: always
+#    environment:
+#      POSTGRES_PASSWORD: password
+#    volumes:
+#    - pgdata:/var/lib/postgresql/data/pgdata
+
+volumes:
+  #  pgdata: rrrcn_pgdata
+  strapi_database:
+    external: ${STRAPI_USE_EXTERNAL_DB:-false}
+  strapi_public:
+    external: ${STRAPI_USE_EXTERNAL_PUBLIC:-false}

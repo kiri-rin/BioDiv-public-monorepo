@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analysis_results",
+  "info": {
+    "singularName": "analysis-result",
+    "pluralName": "analysis-results",
+    "displayName": "AnalysisResult",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_result": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::result.result",
+      "inversedBy": "analysis_results"
+    },
+    "analysis_type": {
+      "type": "enumeration",
+      "enum": [
+        "data",
+        "population",
+        "survival",
+        "classification",
+        "migration",
+        "vulnerability",
+        "grid-vulnerability",
+        "habitat-area-vulnerability",
+        "data-selection-correlation",
+        "data-selection-t-test",
+        "data-selection-normal",
+        "data-selection-moran"
+      ]
+    },
+    "analysis_data": {
+      "type": "json"
+    },
+    "admin_comment": {
+      "type": "richtext",
+      "private": true
+    },
+    "parent_results": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::analysis-result.analysis-result",
+      "inversedBy": "children_results"
+    },
+    "children_results": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::analysis-result.analysis-result",
+      "inversedBy": "parent_results"
+    },
+    "species": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::species.species"
+    },
+    "expires_at": {
+      "type": "datetime"
+    },
+
+    "soure_files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "result_files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "dont_expires": {
+      "type": "boolean"
+    }
+  }
+}

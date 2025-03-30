@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bird_tracks",
+  "info": {
+    "singularName": "bird-track",
+    "pluralName": "bird-tracks",
+    "displayName": "Map Bird track",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "track": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "json"
+    },
+    "species": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::species.species",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "source_file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "spatial_grids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map.map-spatial-grid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "index": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    },
+    "map_migration_tracks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map-migration-track.map-migration-track",
+      "mappedBy": "map_bird_track"
+    }
+  }
+}

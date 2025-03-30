@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_species_species_area_infos",
+  "info": {
+    "displayName": "species area info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "species": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::species.species"
+    },
+    "density_per_precense": {
+      "type": "float"
+    },
+    "vulnerability": {
+      "type": "float",
+      "min": 0
+    }
+  }
+}

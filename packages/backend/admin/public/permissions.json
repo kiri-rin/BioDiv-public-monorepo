@@ -1,0 +1,1586 @@
+[
+  {
+    "id": 1,
+    "name": "Authenticated",
+    "description": "Default role given to authenticated user.",
+    "type": "authenticated",
+    "createdAt": "2024-12-05T11:01:45.792Z",
+    "updatedAt": "2025-03-23T12:38:24.730Z",
+    "permissions": {
+      "api::analysis": {
+        "controllers": {
+          "analysis": {
+            "processAnalysis": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getAvailableScripts": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::analysis-result": {
+        "controllers": {
+          "analysis-result": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::bird-track": {
+        "controllers": {
+          "batch": {
+            "uploadMany": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "bird-track": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::generated-track": {
+        "controllers": {
+          "generated-track": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map": {
+        "controllers": {
+          "map-habitat-area": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-import-config": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid-cell": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid-district": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-species-migration": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-vulnerability-result": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-vulnereability-calculation": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-migration-track": {
+        "controllers": {
+          "map-migration-track": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-vulnerability-tracks-config-calculation": {
+        "controllers": {
+          "map-vulnerability-tracks-config-calculation": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::migration": {
+        "controllers": {
+          "migration": {
+            "generateTracks": {
+              "enabled": true,
+              "policy": ""
+            },
+            "splitArea": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::migrations-tracks-input": {
+        "controllers": {
+          "migrations-tracks-input": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::result": {
+        "controllers": {
+          "result": {
+            "getResultArchive": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getLoadingInfo": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getResultLogs": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getMyResults": {
+              "enabled": true,
+              "policy": ""
+            },
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::sensitive-area": {
+        "controllers": {
+          "sensitive-area": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::sensitive-area-source": {
+        "controllers": {
+          "sensitive-area-source": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::spatial-services": {
+        "controllers": {
+          "spatial-services": {
+            "generalizeAreaPoints": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findBuffersDistances": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::species": {
+        "controllers": {
+          "species": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::content-type-builder": {
+        "controllers": {
+          "components": {
+            "getComponents": {
+              "enabled": false,
+              "policy": ""
+            },
+            "getComponent": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "content-types": {
+            "getContentTypes": {
+              "enabled": false,
+              "policy": ""
+            },
+            "getContentType": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::email": {
+        "controllers": {
+          "email": {
+            "send": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::upload": {
+        "controllers": {
+          "content-api": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "destroy": {
+              "enabled": false,
+              "policy": ""
+            },
+            "upload": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::auth-ext": {
+        "controllers": {
+          "authExt": {
+            "authStep": {
+              "enabled": false,
+              "policy": ""
+            },
+            "resetProvider": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::i18n": {
+        "controllers": {
+          "locales": {
+            "listLocales": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::users-permissions": {
+        "controllers": {
+          "auth": {
+            "callback": {
+              "enabled": false,
+              "policy": ""
+            },
+            "changePassword": {
+              "enabled": true,
+              "policy": ""
+            },
+            "resetPassword": {
+              "enabled": false,
+              "policy": ""
+            },
+            "connect": {
+              "enabled": false,
+              "policy": ""
+            },
+            "forgotPassword": {
+              "enabled": false,
+              "policy": ""
+            },
+            "register": {
+              "enabled": false,
+              "policy": ""
+            },
+            "emailConfirmation": {
+              "enabled": false,
+              "policy": ""
+            },
+            "sendEmailConfirmation": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "user": {
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "count": {
+              "enabled": false,
+              "policy": ""
+            },
+            "destroy": {
+              "enabled": false,
+              "policy": ""
+            },
+            "me": {
+              "enabled": true,
+              "policy": ""
+            }
+          },
+          "role": {
+            "createRole": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "updateRole": {
+              "enabled": false,
+              "policy": ""
+            },
+            "deleteRole": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "permissions": {
+            "getPermissions": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-spatial-grid-cell": {
+        "controllers": {
+          "spatial-grid-cell": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-spatial-grid": {
+        "controllers": {
+          "spatial-grid": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Public",
+    "description": "Default role given to unauthenticated user.",
+    "type": "public",
+    "createdAt": "2024-12-05T11:01:45.796Z",
+    "updatedAt": "2025-03-23T12:38:24.735Z",
+    "permissions": {
+      "api::analysis": {
+        "controllers": {
+          "analysis": {
+            "processAnalysis": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getAvailableScripts": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::analysis-result": {
+        "controllers": {
+          "analysis-result": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::bird-track": {
+        "controllers": {
+          "batch": {
+            "uploadMany": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "bird-track": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::generated-track": {
+        "controllers": {
+          "generated-track": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map": {
+        "controllers": {
+          "map-habitat-area": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-import-config": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid-cell": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid-district": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-spatial-grid": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-species-migration": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-vulnerability-result": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "map-vulnereability-calculation": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-migration-track": {
+        "controllers": {
+          "map-migration-track": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-vulnerability-tracks-config-calculation": {
+        "controllers": {
+          "map-vulnerability-tracks-config-calculation": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::migration": {
+        "controllers": {
+          "migration": {
+            "generateTracks": {
+              "enabled": true,
+              "policy": ""
+            },
+            "splitArea": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::migrations-tracks-input": {
+        "controllers": {
+          "migrations-tracks-input": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::result": {
+        "controllers": {
+          "result": {
+            "getResultArchive": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getLoadingInfo": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getResultLogs": {
+              "enabled": true,
+              "policy": ""
+            },
+            "getMyResults": {
+              "enabled": false,
+              "policy": ""
+            },
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::sensitive-area": {
+        "controllers": {
+          "sensitive-area": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::sensitive-area-source": {
+        "controllers": {
+          "sensitive-area-source": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::spatial-services": {
+        "controllers": {
+          "spatial-services": {
+            "generalizeAreaPoints": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findBuffersDistances": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::species": {
+        "controllers": {
+          "species": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            },
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "delete": {
+              "enabled": false,
+              "policy": ""
+            },
+            "createLocalization": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::content-type-builder": {
+        "controllers": {
+          "components": {
+            "getComponents": {
+              "enabled": false,
+              "policy": ""
+            },
+            "getComponent": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "content-types": {
+            "getContentTypes": {
+              "enabled": false,
+              "policy": ""
+            },
+            "getContentType": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::email": {
+        "controllers": {
+          "email": {
+            "send": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::upload": {
+        "controllers": {
+          "content-api": {
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "destroy": {
+              "enabled": false,
+              "policy": ""
+            },
+            "upload": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::auth-ext": {
+        "controllers": {
+          "authExt": {
+            "authStep": {
+              "enabled": true,
+              "policy": ""
+            },
+            "resetProvider": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::i18n": {
+        "controllers": {
+          "locales": {
+            "listLocales": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "plugin::users-permissions": {
+        "controllers": {
+          "auth": {
+            "callback": {
+              "enabled": true,
+              "policy": ""
+            },
+            "changePassword": {
+              "enabled": false,
+              "policy": ""
+            },
+            "resetPassword": {
+              "enabled": true,
+              "policy": ""
+            },
+            "connect": {
+              "enabled": true,
+              "policy": ""
+            },
+            "forgotPassword": {
+              "enabled": true,
+              "policy": ""
+            },
+            "register": {
+              "enabled": true,
+              "policy": ""
+            },
+            "emailConfirmation": {
+              "enabled": true,
+              "policy": ""
+            },
+            "sendEmailConfirmation": {
+              "enabled": true,
+              "policy": ""
+            }
+          },
+          "user": {
+            "create": {
+              "enabled": false,
+              "policy": ""
+            },
+            "update": {
+              "enabled": false,
+              "policy": ""
+            },
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "count": {
+              "enabled": false,
+              "policy": ""
+            },
+            "destroy": {
+              "enabled": false,
+              "policy": ""
+            },
+            "me": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "role": {
+            "createRole": {
+              "enabled": false,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": false,
+              "policy": ""
+            },
+            "find": {
+              "enabled": false,
+              "policy": ""
+            },
+            "updateRole": {
+              "enabled": false,
+              "policy": ""
+            },
+            "deleteRole": {
+              "enabled": false,
+              "policy": ""
+            }
+          },
+          "permissions": {
+            "getPermissions": {
+              "enabled": false,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-spatial-grid-cell": {
+        "controllers": {
+          "spatial-grid-cell": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-spatial-grid": {
+        "controllers": {
+          "spatial-grid": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::vulnerability-result": {
+        "controllers": {
+          "vulnerability-result": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-spatial-grid-district": {
+        "controllers": {
+          "spatial-grid-district": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::map-habitat-area": {
+        "controllers": {
+          "habitat-area": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::habitat-area-population": {
+        "controllers": {
+          "habitat-area-population": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::species-cell-population": {
+        "controllers": {
+          "species-cell-population": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      },
+      "api::vulnerability-info": {
+        "controllers": {
+          "vulnerability-info": {
+            "find": {
+              "enabled": true,
+              "policy": ""
+            },
+            "findOne": {
+              "enabled": true,
+              "policy": ""
+            }
+          }
+        }
+      }
+    }
+  }
+]

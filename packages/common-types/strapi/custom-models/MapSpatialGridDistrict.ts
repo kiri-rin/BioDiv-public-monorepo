@@ -1,0 +1,22 @@
+import { MapSpatialGridCell } from "./MapSpatialGridCell";
+import { MapSpatialGrid } from "./MapSpatialGrid";
+export type MapSpatialGridDistrict = {
+  id: number;
+  name: string | null;
+  indexed: boolean | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: object | null;
+  map_spatial_grid_cells: MapSpatialGridCell[] | null;
+  map_spatial_grid: MapSpatialGrid | null;
+  slug: string;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: MapSpatialGridDistrict[] | null;
+  locale: string | null;
+};

@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "exclude": ["**/*.test.*","node_modules","dist"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "moduleResolution": "Node",
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": ".",
+    "noEmit": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@rrrcn/common-types/*": ["./*"]
+    }
+  },
+}

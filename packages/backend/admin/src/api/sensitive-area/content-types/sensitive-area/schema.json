@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensitive_areas",
+  "info": {
+    "singularName": "sensitive-area",
+    "pluralName": "sensitive-areas",
+    "displayName": "Sensitive area",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "bbox_left": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_top": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_right": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_bottom": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "polygon": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "indexed": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "spatial_grid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-spatial-grid"
+    },
+    "spatial_grid_cells": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-spatial-grid-cell",
+      "inversedBy": "sensitive_areas"
+    },
+    "sensitive_area_source": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sensitive-area-source.sensitive-area-source",
+      "inversedBy": "sensitive_areas"
+    }
+  }
+}

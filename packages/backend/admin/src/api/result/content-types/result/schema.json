@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "results",
+  "info": {
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "UsersResult",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "processing",
+        "completed",
+        "error"
+      ]
+    },
+    "uid": {
+      "type": "uid"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "results"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "data",
+        "population",
+        "survival",
+        "maxent",
+        "random-forest",
+        "migration",
+        "vulnerability",
+        "habitat-area-vulnerability",
+        "grid-vulnerability",
+        "data-selection-correlation",
+        "data-selection-t-test",
+        "data-selection-normal",
+        "data-selection-moran"
+      ]
+    },
+    "finished_at": {
+      "type": "datetime"
+    },
+    "logs": {
+      "type": "richtext"
+    },
+    "spatial_grid_cell": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::map.map-spatial-grid-cell",
+      "inversedBy": "results"
+    },
+    "analysis_results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::analysis-result.analysis-result",
+      "mappedBy": "users_result"
+    },
+    "expires_at": {
+      "type": "datetime"
+    }
+  }
+}

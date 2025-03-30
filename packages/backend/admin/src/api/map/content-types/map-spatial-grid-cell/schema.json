@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_spatial_grid_cells",
+  "info": {
+    "singularName": "map-spatial-grid-cell",
+    "pluralName": "map-spatial-grid-cells",
+    "displayName": "Map Spatial Grid Cell",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "spatial_grid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-spatial-grid"
+    },
+    "bbox_left": {
+      "type": "float"
+    },
+    "bbox_top": {
+      "type": "float"
+    },
+    "bbox_right": {
+      "type": "float"
+    },
+    "bbox_bottom": {
+      "type": "float"
+    },
+    "polygon": {
+      "type": "json"
+    },
+    "results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::result.result",
+      "mappedBy": "map_spatial_grid_cell"
+    },
+    "total_vulnerability": {
+      "type": "decimal"
+    },
+    "species_infos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "species.species-area-info"
+    },
+    "habitat_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-habitat-area",
+      "inversedBy": "map_spatial_grid_cells"
+    },
+    "import_configs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-import-config",
+      "inversedBy": "map_spatial_grid_cells"
+    },
+    "sensitive_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sensitive-area.sensitive-area",
+      "mappedBy": "map_spatial_grid_cells"
+    },
+    "map_spatial_grid_district": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-spatial-grid-district",
+      "inversedBy": "map_spatial_grid_cells"
+    },
+    "map_vulnerability_results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map.map-vulnerability-result",
+      "mappedBy": "spatial_grid_cell"
+    },
+    "map_species_migrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-species-migration",
+      "mappedBy": "map_spatial_grid_cells"
+    }
+  }
+}

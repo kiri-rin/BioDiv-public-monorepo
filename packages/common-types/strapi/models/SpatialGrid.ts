@@ -1,0 +1,22 @@
+import { Species_SpeciesAreaInfo__component } from "./Species_SpeciesAreaInfo__component";
+import { SpatialGridDistrict } from "./SpatialGridDistrict";
+export type SpatialGrid = {
+  id: number;
+  title: string | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: object | null;
+  slug: string | null;
+  cell_size: number;
+  species_infos: Species_SpeciesAreaInfo__component[] | null;
+  spatial_grid_districts: SpatialGridDistrict[] | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: SpatialGrid[] | null;
+  locale: string | null;
+};

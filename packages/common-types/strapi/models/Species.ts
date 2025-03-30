@@ -1,0 +1,23 @@
+import { Upload_File } from "./Upload_File";
+import { MapHabitatArea } from "./MapHabitatArea";
+import { MapSpeciesMigration } from "./MapSpeciesMigration";
+export type Species = {
+  id: number;
+  name: string | null;
+  green_vulnerability_max: number | null;
+  wingspan: number | null;
+  length: number | null;
+  nocturnalActivity: number | null;
+  yellow_vulnerability_max: number | null;
+  default_density_per_area_precense: number | null;
+  image: Upload_File | null;
+  slug: string;
+  habitat_areas: MapHabitatArea[] | null;
+  map_species_migrations: MapSpeciesMigration[] | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: Species[] | null;
+  locale: string | null;
+};

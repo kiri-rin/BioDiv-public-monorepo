@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "migrations_tracks_inputs",
+  "info": {
+    "singularName": "migrations-tracks-input",
+    "pluralName": "migrations-tracks-inputs",
+    "displayName": "migrations-tracks-input"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tracks": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "name_prefix": {
+      "type": "string"
+    },
+    "altitude_key": {
+      "type": "string"
+    },
+    "date_key": {
+      "type": "string"
+    },
+    "date_format": {
+      "type": "string"
+    },
+    "speed_key": {
+      "type": "string"
+    },
+    "reverse": {
+      "type": "boolean"
+    },
+    "add_z": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

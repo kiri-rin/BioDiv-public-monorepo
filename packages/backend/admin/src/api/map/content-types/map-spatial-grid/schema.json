@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_spatial_grids",
+  "info": {
+    "singularName": "map-spatial-grid",
+    "pluralName": "map-spatial-grids",
+    "displayName": "Map Spatial Grid",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "fulfilled": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_left": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_top": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_right": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "bbox_bottom": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "polygon": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "cell_size": {
+      "type": "float",
+      "required": true,
+      "min": 5,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "species_infos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "species.species-area-info",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "map_spatial_grid_districts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map.map-spatial-grid-district",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "mappedBy": "map_spatial_grid"
+    },
+    "map_vulnereability_calculations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map.map-vulnereability-calculation",
+      "mappedBy": "map_spatial_grid"
+    }
+  }
+}

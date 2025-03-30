@@ -1,0 +1,41 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/server",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "../..",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../..",
+    "paths":{
+      "@rrrcn/services/src/*": ["../rrrcn-services/dist/src/*"],
+      "@rrrcn/common-helpers/src/*": ["../common/dist/src/*"]
+    }
+  },
+  "include": [
+    "./",
+    "./**/*.ts",
+    "./**/*.js",
+    "src/**/*.json"
+  ],
+  "references": [
+    {
+      "path": "../rrrcn-services"
+    },
+    {
+      "path": "../common"
+    }
+  ],
+  "exclude": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    ".cache/",
+    ".tmp/",
+    "src/admin/",
+    "**/*.test.*",
+    "src/plugins/**"
+  ]
+
+
+
+}

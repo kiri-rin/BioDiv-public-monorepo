@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_import_configs",
+  "info": {
+    "singularName": "map-import-config",
+    "pluralName": "map-import-configs",
+    "displayName": "Map Import config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "map_spatial_grid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-spatial-grid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "indexed": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "data": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "map_spatial_grid_cells": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-spatial-grid-cell",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "mappedBy": "import_configs"
+    },
+    "comments": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "species": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::species.species"
+    }
+  }
+}

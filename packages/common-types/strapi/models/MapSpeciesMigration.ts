@@ -1,0 +1,24 @@
+import { Species } from "./Species";
+import { MapMigrationTrack } from "./MapMigrationTrack";
+import { MapSpatialGrid } from "./MapSpatialGrid";
+import { MapSpatialGridCell } from "./MapSpatialGridCell";
+export type MapSpeciesMigration = {
+  id: number;
+  season: ("autumn" | "winter" | "spring" | "summer") | null;
+  species: Species | null;
+  map_migration_tracks: MapMigrationTrack[] | null;
+  map_spatial_grid: MapSpatialGrid | null;
+  map_spatial_grid_cells: MapSpatialGridCell[] | null;
+  indexed_areas: object | null;
+  tracks_count: number | null;
+  generated_tracks: object | null;
+  clipped_tracks: object | null;
+  meta: object | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: MapSpeciesMigration[] | null;
+  locale: string | null;
+};

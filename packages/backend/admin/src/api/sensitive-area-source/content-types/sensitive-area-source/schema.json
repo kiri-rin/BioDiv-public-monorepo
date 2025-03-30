@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensitive_area_sources",
+  "info": {
+    "singularName": "sensitive-area-source",
+    "pluralName": "sensitive-area-sources",
+    "displayName": "Sensitive Area Source"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "shp",
+        "kml"
+      ]
+    },
+    "source_file": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sensitive_areas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sensitive-area.sensitive-area",
+      "mappedBy": "sensitive_area_source"
+    },
+    "spatial_grid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-spatial-grid"
+    }
+  }
+}

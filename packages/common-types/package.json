@@ -1,0 +1,20 @@
+{
+  "name": "@rrrcn/common-types",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "geojson": "^0.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "1.0.3",
+    "@types/geojson": "^7946.0.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiri-rin/rrrcn-monorepo.git"
+  },
+  "private": true
+}

@@ -1,0 +1,23 @@
+import { MapSpatialGrid } from "./MapSpatialGrid";
+import { MapSpatialGridCell } from "./MapSpatialGridCell";
+import { SensitiveAreaSource } from "./SensitiveAreaSource";
+export type SensitiveArea = {
+  id: number;
+  name: string | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: object | null;
+  indexed: boolean | null;
+  spatial_grid: MapSpatialGrid | null;
+  spatial_grid_cells: MapSpatialGridCell[] | null;
+  sensitive_area_source: SensitiveAreaSource | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: SensitiveArea[] | null;
+  locale: string | null;
+};

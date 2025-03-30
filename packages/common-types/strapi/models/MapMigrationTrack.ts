@@ -1,0 +1,23 @@
+import { BirdTrack } from "./BirdTrack";
+import { MapSpeciesMigration } from "./MapSpeciesMigration";
+export type MapMigrationTrack = {
+  id: number;
+  locations_count: number | null;
+  flight_locations_count: number | null;
+  average_flight_speed: number | null;
+  name: string | null;
+  altitude_key: string | null;
+  date_key: string | null;
+  date_format: string | null;
+  speed_key: string | null;
+  reverse: boolean | null;
+  add_z: boolean | null;
+  track: object | null;
+  map_bird_track: BirdTrack | null;
+  map_species_migrations: MapSpeciesMigration[] | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+};

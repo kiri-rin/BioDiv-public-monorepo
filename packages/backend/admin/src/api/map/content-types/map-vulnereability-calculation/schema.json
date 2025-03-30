@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_vulnereability_calculations",
+  "info": {
+    "singularName": "map-vulnereability-calculation",
+    "pluralName": "map-vulnereability-calculations",
+    "displayName": "Map Vulnereability Calculation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vulnerability_configs": {
+      "type": "json"
+    },
+    "processed": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "habitat_area",
+        "migration",
+        "import"
+      ]
+    },
+    "map_habitat_area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-habitat-area"
+    },
+    "map_species_migration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-species-migration"
+    },
+    "map_vulnerability_results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map.map-vulnerability-result",
+      "mappedBy": "map_vulnereability_calculation"
+    },
+    "map_spatial_grid": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::map.map-spatial-grid",
+      "inversedBy": "map_vulnereability_calculations"
+    },
+    "map_import_config": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::map.map-import-config"
+    }
+  }
+}

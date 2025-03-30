@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    environment:
+      RRRCN_API_RULE: $RRRCN_API_RULE
+      RRRCN_WEB_RULE: $RRRCN_WEB_RULE
+      RRRCN_VULNERABILITY_RULE: $RRRCN_VULNERABILITY_RULE
+    # The official v2 Traefik docker image
+    image: kiri909/rrrcn-traefik:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Enables the web UI and tells Traefik to listen to dock
+    restart: unless-stopped
+    ports:
+      # The HTTP port
+      - "80:80"
+      - "443:443"
+    extra_hosts:
+      - host.docker.internal:host-gateway

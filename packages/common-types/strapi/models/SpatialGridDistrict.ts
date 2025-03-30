@@ -1,0 +1,21 @@
+import { SpatialGridCell } from "./SpatialGridCell";
+import { SpatialGrid } from "./SpatialGrid";
+export type SpatialGridDistrict = {
+  id: number;
+  name: string | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: object | null;
+  spatial_grid_cells: SpatialGridCell[] | null;
+  spatial_grid: SpatialGrid | null;
+  slug: string;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: SpatialGridDistrict[] | null;
+  locale: string | null;
+};

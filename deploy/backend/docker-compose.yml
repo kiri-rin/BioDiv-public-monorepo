@@ -1,0 +1,40 @@
+services:
+  api:
+    environment:
+      R_BASE_URL: "http://R:8000"
+    image: kiri909/rrrcn-api:latest
+    build:
+      dockerfile: deploy/backend/Dockerfile_strapi
+      context: ../..
+    ports:
+      - "1337:1337"
+    volumes:
+      - strapi_database:/app/packages/backend/admin/.tmp
+      - strapi_public:/app/packages/backend/admin/public
+  R:
+    image: kiri909/rrrcn-r-api:latest
+    build:
+      dockerfile: ../../../deploy/backend/Dockerfile_r-service
+      context: ../../packages/backend/r-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - strapi_public:/app/api/public
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      PGDATA: "/var/lib/postgresql/data/pgdata/"
+    ports:
+      - 5432:5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+  strapi_database:
+    external: ${STRAPI_USE_EXTERNAL_DB:-false}
+  strapi_public:
+    external: ${STRAPI_USE_EXTERNAL_PUBLIC:-false}

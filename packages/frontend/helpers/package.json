@@ -1,0 +1,21 @@
+{
+  "name": "@rrrcn/frontend-helpers",
+  "version": "1.0.0",
+  "dependencies": {
+    "@react-google-maps/api": "^2.18.1",
+    "@rrrcn/common-types": "workspace:*",
+    "@turf/helpers": "*",
+    "@turf/turf": "*",
+    "geojson": "*",
+    "shpjs": "*"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.14",
+    "@types/react": "^18.0.0",
+    "@types/shpjs": "^3.4.7",
+    "typescript": "^4.9.4"
+  }
+}

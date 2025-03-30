@@ -1,0 +1,40 @@
+http:
+  routers:
+    rrrcn_api_http:
+      rule: {{env "RRRCN_API_RULE"}}
+      service: rrrcn_strapi
+    rrrcn_api:
+      rule: {{env "RRRCN_API_RULE"}}
+      service: rrrcn_strapi
+      tls:
+        certResolver: letsencrypt
+    rrrcn_web_http:
+      rule: {{env "RRRCN_WEB_RULE"}}
+      service: rrrcn_web
+    rrrcn_web:
+      rule: {{env "RRRCN_WEB_RULE"}}
+      service: rrrcn_web
+      tls:
+        certResolver: letsencrypt
+    rrrcn_next_http:
+      rule: {{env "RRRCN_VULNERABILITY_RULE"}}
+      service: rrrcn_next
+    rrrcn_next:
+      rule: {{env "RRRCN_VULNERABILITY_RULE"}}
+      service: rrrcn_next
+      tls:
+        certResolver: letsencrypt
+
+  services:
+    rrrcn_next:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:3001
+    rrrcn_strapi:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:1338
+    rrrcn_web:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:9999

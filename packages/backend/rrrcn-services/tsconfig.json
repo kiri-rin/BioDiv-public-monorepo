@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "include": ["src","src/**/*.json"],
+
+  "compilerOptions": {
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "moduleResolution": "Node"
+  },
+
+}

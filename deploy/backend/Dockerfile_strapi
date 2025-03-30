@@ -1,0 +1,44 @@
+FROM node:18.19.1
+
+RUN mkdir -p /app
+RUN mkdir -p /app/packages
+RUN mkdir -p /app/packages/backend
+RUN mkdir -p /app/packages/backend/admin
+RUN mkdir -p /app/packages/backend/rrrcn-services
+RUN mkdir -p /app/packages/common-types
+RUN mkdir -p /app/packages/common-helpers
+RUN mkdir -p /app/patches
+WORKDIR /app
+
+COPY .yarn ./.yarn
+COPY package*.json /app
+COPY .yarnrc.yml /app
+COPY yarn.lock /app
+COPY ./packages/backend/admin/package*.json /app/packages/backend/admin
+COPY ./packages/backend/rrrcn-services/package*.json /app/packages/backend/rrrcn-services
+COPY ./packages/common-types/package*.json /app/packages/common-types
+COPY ./packages/common-helpers/package*.json /app/packages/common-helpers
+
+RUN yarn install
+COPY ./packages/backend/admin /app/packages/backend/admin
+COPY ./packages/backend/rrrcn-services /app/packages/backend/rrrcn-services
+COPY ./packages/common-types /app/packages/common-types
+COPY ./packages/common-helpers /app/packages/common-helpers
+
+
+ARG HOST
+ARG PORT
+ARG APP_KEYS
+ARG API_TOKEN_SALT
+ARG ADMIN_JWT_SECRET
+ARG JWT_SECRET
+ENV NODE_ENV=production
+EXPOSE $PORT
+
+RUN yarn build-admin
+#USER node
+
+WORKDIR /app/packages/backend/admin
+
+
+CMD ["yarn", "start"]

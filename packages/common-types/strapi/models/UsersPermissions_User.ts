@@ -1,0 +1,23 @@
+import { UsersPermissions_Role } from "./UsersPermissions_Role";
+import { AuthExt_AuthProvider } from "./AuthExt_AuthProvider";
+import { Result } from "./Result";
+export type UsersPermissions_User = {
+  id: number;
+  username: string;
+  email: string;
+  provider: string | null;
+  password: string | null;
+  resetPasswordToken: string | null;
+  confirmationToken: string | null;
+  confirmed: boolean | null;
+  blocked: boolean | null;
+  role: UsersPermissions_Role | null;
+  auth_providers: AuthExt_AuthProvider[] | null;
+  results: Result[] | null;
+  auth_steps_number: number | null;
+  result_expires_hours_default: number | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+};

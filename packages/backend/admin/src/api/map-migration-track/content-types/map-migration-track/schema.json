@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_migration_tracks",
+  "info": {
+    "singularName": "map-migration-track",
+    "pluralName": "map-migration-tracks",
+    "displayName": "Map Migration Track"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations_count": {
+      "type": "integer"
+    },
+    "flight_locations_count": {
+      "type": "integer"
+    },
+    "average_flight_speed": {
+      "type": "float"
+    },
+    "name": {
+      "type": "string"
+    },
+     "altitude_key": {
+      "type": "string"
+    },
+     "date_key": {
+      "type": "string"
+    },
+     "date_format": {
+      "type": "string"
+    },
+     "speed_key": {
+      "type": "string"
+    },
+     "reverse": {
+      "type": "boolean"
+    },
+     "add_z": {
+      "type": "boolean",
+       "default": true
+    },
+
+    "track": {
+      "type": "json"
+    },
+    "map_bird_track": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bird-track.bird-track",
+      "inversedBy": "map_migration_tracks"
+    },
+    "map_species_migrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::map.map-species-migration",
+      "mappedBy": "map_migration_tracks"
+    }
+  }
+}

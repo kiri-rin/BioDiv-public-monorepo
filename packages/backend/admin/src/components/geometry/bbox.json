@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_geometry_bboxes",
+  "info": {
+    "displayName": "bbox"
+  },
+  "options": {},
+  "attributes": {
+    "left": {
+      "type": "float"
+    },
+    "top": {
+      "type": "float"
+    },
+    "right": {
+      "type": "float"
+    },
+    "bottom": {
+      "type": "float"
+    }
+  }
+}

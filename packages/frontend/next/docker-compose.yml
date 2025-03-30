@@ -1,0 +1,8 @@
+services:
+  rrrcn-next:
+    build:
+      context: ../..
+      dockerfile: ./packages/next/Dockerfile
+    image: kiri909/rrrcn-next:latest # TODO ADD DIFFERENT IMAGES FOR STAGINGS
+    ports:
+      - "3000:3000"

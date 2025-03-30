@@ -1,0 +1,47 @@
+{
+  "name": "@rrrcn/mono",
+  "private": true,
+  "workspaces": [
+    "packages/backend/admin",
+    "packages/backend/rrrcn-services",
+    "packages/frontend/next",
+    "packages/frontend/web",
+    "packages/frontend/helpers",
+    "packages/common-types",
+    "packages/common-helpers"
+  ],
+  "nohoist": [
+    "**/web",
+    "web/**",
+    "**/web/**",
+    "**/web/**/*",
+    "**/admin",
+    "admin/**",
+    "**/admin/**",
+    "**/admin/**/*"
+  ],
+  "scripts": {
+    "postinstall": "patch-package",
+    "start-admin": " tsc --build ./packages/common-types && tsc --build ./packages/backend/rrrcn-services && yarn workspace admin develop",
+    "start-web": "yarn workspace web start",
+    "build-admin": "tsc --build ./packages/backend/rrrcn-services && tsc --build ./packages/common-types && yarn workspace admin build",
+    "build-web": "yarn workspace web build",
+    "build-services": "tsc --build ./packages/backend/rrrcn-services "
+  },
+  "dependencies": {
+    "patch-package": "^6.5.0",
+    "postinstall-postinstall": "^2.1.0"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.2",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unused-imports": "^3",
+    "prettier": "^2.6.2",
+    "typescript": "^4.4.2"
+  }
+}

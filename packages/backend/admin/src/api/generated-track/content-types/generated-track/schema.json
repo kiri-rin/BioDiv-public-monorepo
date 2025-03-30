@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "generated_tracks",
+  "info": {
+    "singularName": "generated-track",
+    "pluralName": "generated-tracks",
+    "displayName": "Generated track",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tracks": {
+      "type": "json"
+    },
+    "areas": {
+      "type": "json"
+    },
+    "bird_tracks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bird-track.bird-track"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "area_size": {
+      "type": "float"
+    }
+  }
+}

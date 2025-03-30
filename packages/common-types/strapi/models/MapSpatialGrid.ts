@@ -1,0 +1,25 @@
+import { Species_SpeciesAreaInfo__component } from "./Species_SpeciesAreaInfo__component";
+import { MapSpatialGridDistrict } from "./MapSpatialGridDistrict";
+import { MapVulnereabilityCalculation } from "./MapVulnereabilityCalculation";
+export type MapSpatialGrid = {
+  id: number;
+  title: string | null;
+  fulfilled: boolean | null;
+  bbox_left: number | null;
+  bbox_top: number | null;
+  bbox_right: number | null;
+  bbox_bottom: number | null;
+  polygon: object | null;
+  slug: string | null;
+  cell_size: number;
+  species_infos: Species_SpeciesAreaInfo__component[] | null;
+  map_spatial_grid_districts: MapSpatialGridDistrict[] | null;
+  map_vulnereability_calculations: MapVulnereabilityCalculation[] | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  publishedAt: string | null;
+  createdBy: any | null;
+  updatedBy: any | null;
+  localizations: MapSpatialGrid[] | null;
+  locale: string | null;
+};

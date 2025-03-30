@@ -1,0 +1,17 @@
+services:
+  nginx:
+    image: kiri909/rrrcn-web:latest
+    environment:
+      REACT_APP_BASE_PATH: $REACT_APP_BASE_PATH
+      REACT_APP_GOOGLE_KEY: $REACT_APP_GOOGLE_KEY
+    build:
+      dockerfile: deploy/gis/Dockerfile
+      context: ../..
+      args:
+        REACT_APP_BASE_PATH: $REACT_APP_BASE_PATH
+        REACT_APP_GOOGLE_KEY: $REACT_APP_GOOGLE_KEY
+    ports:
+      - "9999:80"
+    restart: always
+  #    volumes:
+  #        - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
