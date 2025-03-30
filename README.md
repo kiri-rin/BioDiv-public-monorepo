@@ -1,0 +1,1 @@
+The program is distributed under the CC BY-ND 4.0 license Citation: Knizhov K.I., Karyakin I.V. BioDiv - a program for modelling distribution, population numbers, survival and risk of collision of birds with wind turbines. GIS portal of the project "Eagles of the Palearctic". 2025. URL: https://gis.eaglesofthepalearctic.org
